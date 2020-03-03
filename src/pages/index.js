@@ -4,45 +4,46 @@ import { Link, graphql } from 'gatsby';
 import { rhythm } from "../utils/typography";
 import Layout from "../components/layout";
 
+
 export default ({ data }) => {
   console.log(data)
   return (
     <Layout>
       <div>
-        <h1
-          css={css`
-            display: inline-block;
-            border-bottom: 1px solid;
-          `}
-        >
-          Amazing Pandas Eating Things
-        </h1>
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link
-              to={node.fields.slug}
-              css={css`
-                text-decoration: none;
-                color: inherit;
-              `}
-            >
-              <h3
+          <div key={node.id} className="wrap-post" css={css`
+            border: solid 1px #ccc;
+            margin-bottom: 30px;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 1px 5px #ccc;
+          `}>
+            <div className="post_link" css={css`
+              border-bottom: solid 1px #ccc;
+              padding-bottom: 10px;
+            `}>
+              <Link
+                to={node.fields.slug}
                 css={css`
-                  margin-bottom: ${rhythm(1 / 4)};
+                  text-decoration: none;
+                  color: inherit;
                 `}
               >
-                {node.frontmatter.title}{" "}
-                <span
+                <h4
                   css={css`
-                    color: #bbb;
+                    margin-bottom: ${rhythm(1 / 4)};
                   `}
                 >
-                  — {node.frontmatter.date}
-                </span>
-              </h3>
-            </Link>
-            <p>{node.excerpt}</p>
+                  {node.frontmatter.title}
+                </h4>
+              </Link>
+            </div>
+            <div className="post_excerpt" css={css`
+              padding-top: 10px;
+              margin-bottom: 0;
+            `}>
+              <p>{node.excerpt}</p>
+            </div>
           </div>
         ))}
       </div>
