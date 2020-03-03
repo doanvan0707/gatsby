@@ -24,9 +24,9 @@ Các method giống nhau nhưng lại có thể xử lý các luồng dữ liệ
 
 Tính chất này cho phép lập trình viên tập trung vào những phần cốt lõi của đối tượng. Interface và abstractclass là 2 thứ thể hiện rõ nhất tính trừu tượng của đối tượng.
 
-Interface: hiểu như là mặt nạ cho các đối tượng khác nhau về bản chất nhưng giống nhau về phương thức.
+**Interface:** hiểu như là mặt nạ cho các đối tượng khác nhau về bản chất nhưng giống nhau về phương thức.
 
-Abstractclass: hiểu là lớp đại diện cho các lớp có cùng tính chất.
+**Abstractclass:** hiểu là lớp đại diện cho các lớp có cùng tính chất.
 
 
 
