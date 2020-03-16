@@ -1,5 +1,5 @@
 ---
-title: Gọp commit trong git"
+title: Gộp commit trong git"
 date: "2020-16-03"
 ---
 ###### sau khi đã commit mới
