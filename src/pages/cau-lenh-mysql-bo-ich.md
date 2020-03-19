@@ -8,3 +8,6 @@ date: "2020-19-03"
 
 ##### Xóa dữ liệu trong bảng, record tiếp theo sẽ tính từ id cuối cùng bị xóa
 ###### DELETE FROM <table> WHERE <condition> 
+
+##### Export 1 bảng trong mysql
+###### mysql -uroot -p <database_name> <table_name> > <ten.sql>
